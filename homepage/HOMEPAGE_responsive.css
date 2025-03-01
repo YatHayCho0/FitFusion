@@ -1,0 +1,41 @@
+@media (max-width: 1024px) {
+    /* Adjust hero section */
+    .hero {
+        height: 400px; /* Slightly taller on tablets */
+    }
+
+    .overlay-text {
+        font-size: 32px; /* Larger text for tablets */
+    }
+
+    .motto {
+        font-size: 22px; /* Larger text for tablets */
+    }
+
+    /* Adjust the content block grid */
+    .content-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .post-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 4, very cool*/
+    }
+
+    /* Make buttons larger and more tablet-friendly */
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* Adjust feedback and community section */
+    .feedback, .about_us, .community-join {
+        padding: 30px 0;
+    }
+
+    /* Responsive for the photo, what else */
+    .photo img {
+        width: 85%;
+        height: 85%;
+    }
+}

@@ -1,0 +1,95 @@
+.community {
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.community h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.post.image1 {
+    background-image: url('../images/Post_Image1.jpg');
+}
+
+.post.image2 {
+    background-image: url('../images/Post_Image2.jpg');
+}
+
+.post.image3 {
+    background-image: url('../images/Post_Image3.jpg');
+}
+
+.post.image4 {
+    background-image: url('../images/Post_Image4.jpg');
+}
+
+.post {
+    background-color: #ccc;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Just realised I can do "," so I don't need to repeat */
+/* section used for feedback, about us and community button*/
+.feedback, .about_us, .community-join {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.feedback, .about_us, .community-join {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.team-photos {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.team-photos h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.photos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.photo p {
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}

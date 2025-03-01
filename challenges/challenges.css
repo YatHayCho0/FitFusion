@@ -1,0 +1,344 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f0f0 0%, #cce0ff 100%); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Text color */
+}
+
+/* Topic Section */
+.topic {
+    background: linear-gradient(135deg, #7b7b7b 0%, #343434 100%); /* Gradient background for header */
+    display: flex;
+    justify-content: space-between; /* Distribute content between left and right, title on the left, trophy icon on the right */
+    align-items: center; /* Vertically center content */
+    color: white;
+    padding: 2.5rem; /* Padding for the header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    position: absolute; /* Absolute positioning for center alignment */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 350px; /* Initial width of the sidebar */
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111; /* Dark background for the sidebar */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* Smooth transition for the sidebar */
+    padding-top: 60px; /* Space for the header */
+    z-index: 1002; /* Ensure it appears above other content */
+}
+
+.sidebar-header {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid #444; /* Separator for the header */
+}
+
+.completed-challenges {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack the challenges vertically */
+    gap: 15px; /* Space between challenges */
+}
+
+.completed-challenge {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    color: white;
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center; /* Center the background image */
+    position: relative;
+}
+
+/* Dark overlay for completed challenge images */
+.completed-challenge::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Styling for text inside completed challenge cards */
+.completed-challenge p {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow to text */
+    font-size: 1rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    flex-grow: 1; /* Allow paragraphs to take up available space */
+    margin: 0; /* Remove default margin */
+}
+
+/* Trophy icon styling */
+#trophy-icon {
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute; /* Position the trophy icon absolutely */
+    right: 1%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+/* Sidebar close button */
+.close-sidebar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+}
+
+.close-sidebar:hover {
+    color: white;
+}
+
+/* Challenge section styling */
+.challenges {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: auto; /* Center the section */
+}
+
+h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the section headers */
+}
+
+/* Ongoing and Available Challenges */
+.ongoing-challenges, .available-challenges {
+    display: flex; /* Use flexbox layout */
+    gap: 2.4rem; /* Space between challenge cards */
+    flex-wrap: wrap; /* Allow elements to wrap to new lines */
+    justify-content: center; /* Center the challenges horizontally */
+}
+
+.ongoing-challenges {
+    margin-bottom: 150px; /* Extra space below ongoing challenges */
+}
+
+/* Challenge card styling */
+.challenge {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Ensure spacing between elements */
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 260px;
+    height: 150px; /* Fixed height */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation on hover */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Dark overlay for challenge cards */
+.challenge::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+/* Hover effect for challenge cards */
+.challenge:hover {
+    transform: translateY(-5px); /* Move the card upwards */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow effect */
+}
+
+/* Text inside challenge cards */
+.challenge p {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow to text */
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Bold text */
+    flex-grow: 1; /* Allow paragraph to take up available space */
+    margin: 0; /* Remove default margin */
+}
+
+/* Progress bar container */
+.progress-circle {
+    position: relative; /* Ensure progress bar is above the challenge card */
+    z-index: 15; /* Ensure progress bar appears on top */
+    background-color: rgba(240, 240, 240, 0.8); /* Semi-transparent background for better visibility */
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Progress bar itself */
+.progress-bar {
+    background-color: #4CAF50; /* Green color for progress */
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.4s ease; /* Smooth width transition */
+}
+
+/* Challenge difficulty indicators */
+.challenge-lightly {
+    border-left: 8px solid #00ced1; /* Light difficulty indicator */
+}
+
+.challenge-moderately {
+    border-left: 8px solid #ffeb3b; /* Moderate difficulty indicator */
+}
+
+.challenge-highly {
+    border-left: 8px solid #f44336; /* High difficulty indicator */
+}
+
+/* Button container for challenge actions */
+.button-container {
+    position: absolute;
+    z-index: 15;
+    bottom: 20px; /* Distance from bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the buttons horizontally */
+}
+
+/* General button styling */
+button {
+    position: relative; /* Ensure buttons appear above challenge cards */
+    z-index: 15;
+    background-color: rgba(76, 175, 80, 0.9); /* Semi-transparent green background */
+    color: white;
+    border: none;
+    margin: 0 10px; /* Spacing between buttons */
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px; /* Rounded buttons */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: rgba(69, 160, 73, 0.9); /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Move button upwards */
+}
+
+/* Button active (clicked) effect */
+button:active {
+    transform: translateY(5px); /* Move button downwards when clicked */
+}
+
+/* Filter dropdown styling */
+.filter {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* Styling for select dropdown */
+select {
+    padding: 0.75rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1rem;
+    width: 200px;
+    transition: border 0.3s; /* Smooth border transition */
+}
+
+select:hover {
+    border: 1px solid #4CAF50; /* Green border on hover */
+}
+
+/* Challenge action buttons: Check-in and Leave */
+.check-in {
+    background-color: rgba(32, 148, 244, 0.9); /* Blue background for check-in */
+    margin-right: 0.5rem;
+    border-radius: 25px;
+}
+
+.leave {
+    background-color: rgba(255, 235, 59, 0.9); /* Yellow background for leave */
+}
+
+/* Hover effect for Check-in button */
+.check-in:hover {
+    background-color: #1976D2;
+}
+
+/* Hover effect for Leave button */
+.leave:hover {
+    background-color: #fdd835;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .challenge {
+        width: 100%; /* Full width for challenge cards */
+    }
+}
+
+/* Modal window styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Above all other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgb(0,0,0); /* Black background */
+    background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
+}
+
+/* Modal content styling */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Modal width */
+    max-width: 500px; /* Max width */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Close button for modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

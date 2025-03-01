@@ -1,0 +1,38 @@
+.navigation-white {
+    color: white;
+}
+
+.navigation-black {
+    color: black;
+}
+
+.bar{
+    list-style-type: none;
+    margin-left: 10px;
+    display: flex;
+}
+
+
+.bar ul li a.current {
+    font-weight: bold;
+}
+
+.bar ul li a{
+      
+    text-decoration: none;    /*Removes underline */
+    font-family: "Montserrat", sans-serif ;
+    font-weight: 400;
+    font-size: 16px;
+      
+}
+
+.bar ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.bar ul li.seperator {
+    margin-right: 5px;
+    font-weight: bold;
+}
+

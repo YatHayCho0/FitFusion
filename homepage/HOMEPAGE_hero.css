@@ -1,0 +1,78 @@
+.hero {
+    background-color: black;
+    background: url('../images/Hero_Image1.jpg') no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-size: center;
+    background-position: center;
+    animation: BGchange 20s infinite;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@keyframes FadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BGchange {
+    0% {
+        background-image: url('../images/Hero_Image1.jpg');
+    }
+    33% {
+        background-image: url('../images/Hero_Image2.jpg');
+    }
+    66% {
+        background-image: url('../images/Hero_Image3.jpg');
+    }
+    100% {
+        background-image: url('../images/Hero_Image4.jpg');
+    }
+}
+
+.overlay-text, .motto, #login-prompt {
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    animation-duration: 1.5s;
+    animation-name: FadeInUp;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.overlay-text {
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.motto {
+    font-size: 24px;
+    animation-delay: 1s;
+}
+
+#login-prompt{
+    margin-top: 20px;
+    z-index: 2;
+    animation-delay: 1.5s;
+}
