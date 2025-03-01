@@ -1,0 +1,1071 @@
+body{
+  font-family: Arial, sans-serif;
+}
+
+#blog-container {
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#blog-container p {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20px;
+  text-align: justify;
+  width: 95%;
+}
+
+#blog-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: bolder;   
+}
+
+#blog-container img {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+#video-container{
+  text-align: center;
+  flex-direction: column; /* Stack video on top of the text */
+  display: flex; /* Use flexbox to center the elements horizontally */
+  justify-content: center;
+  align-items: center;
+  border: 0px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+#video-container p {
+  font-family: "Montserrat", sans-serif ;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20px; 
+  text-align: justify; 
+  width: 95%; /* Ensures the text takes full width of the container */
+}
+#video-containerimg {
+  max-height: 80%;
+  max-width:850px;
+  border: 2px solid #ccc; 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.current {
+    font-weight: bold;
+}
+
+
+#displayName
+{
+  font-weight: bold;
+}
+
+#displayImage
+{
+  width: 50%;
+
+  height: auto;
+  
+  border-radius: 15px;
+}
+.all-posts-container
+{
+  margin: 10px;
+
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: center;
+}
+.post-container
+{
+  background: #d3d3d3;
+
+  margin: 5px;
+
+  width: 25%;
+
+  height: 500px;
+
+  border-radius: 15px;
+}
+
+.wrapperSpacing div{
+  margin-top: 20px;
+}
+.wrapperSpacing{
+  margin: 10px;
+}
+.navSpacing{
+  margin-top: 0px;
+}
+
+
+
+header{
+  margin-top: 0px;
+}
+
+.LiveWorkoutContainer1 {
+  border: 1px solid rgb(149, 149, 149);
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 230px;
+  overflow: hidden; /* This ensures that the image doesn't overflow the container */
+  position: relative;
+}
+.buttonInContainer1 , .textOnWorkout1{
+  z-index: 1;
+}
+
+.LiveWorkoutContainer1 img {
+  width: 100%; /* Make the image take up the full width of the container */
+  height: 100%; /* Make the image take up the full height of the container */
+  object-fit: cover; /* Ensures the image covers the entire container without distortion */
+  border-radius: 10px;
+}
+
+.textOnWorkout1 {
+  font-size: 34px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  position: absolute; /* Position the text absolutely over the image */
+  top: 45%; /* Adjust to place the text vertically */
+  left: 20%; /* Adjust to center horizontally */
+  transform: translate(-50%, -50%); /* Perfect centering */
+  color:white; /* White text for visibility on top of the image */
+  text-align: center;
+  z-index: 2; /* Ensure text appears above the image */
+}
+
+.buttonInContainer1, .LiveWorkoutContainer1 button {
+  position: absolute;
+  top: 45%; /* Position the button near the bottom of the container */
+  left: 80%;
+  transform: translateX(-50% -50%);
+  z-index: 2; /* Ensure the button is above the image */
+}
+
+
+.buttonInContainer1{
+  top: 39%;
+  
+}
+
+
+.TextOnLine{
+  font-size: 29px;
+  font-family: "Anton" , sans-serif;
+  margin-bottom: -35px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1.5px;
+}
+
+.buttonInContainer1 a,  .buttonInContainer1 a:visited , .buttonInContainer2 {
+  font-family: "Montserrat" , sans-serif;
+  font-size: medium;
+  border-radius: 10px;
+  background-color: #5c5a55;
+  color: white;
+  padding: 14px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.buttonInContainer2{
+  border: 1px, solid ,rgb(255, 255, 255 ,0);
+  font-size: medium;
+  padding: 15px 28px;
+}
+
+.buttonInContainer1 a:hover , .buttonInContainer2:hover{
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out ; 
+  color:rgb(56, 56, 195);
+  background-color: #ffffff;
+  transform: scale(0.85);
+}
+#overlay1{
+  margin-top: 0px; /* This is to counter the spaced margin for set for all divs */
+  transition: opacity 0.8s ease, visibility 0.8s;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.overlayBox {
+  display: flex;
+    flex-direction: column; /* Ensures content stays stacked */
+    justify-content: center;
+    align-items: center;
+  width: 1000px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+#overlay1.active {
+  visibility: visible;
+  opacity: 1;
+  overflow: hidden;
+}
+
+#overlay1 .overlayContent {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+#overlay1 .overlayContent1 img {
+  max-width: 100%;
+  height: auto;
+}   
+
+#overlay1.active .overlayContent1 {
+  opacity: 1;
+}
+.xButton1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.xButton1:hover {
+  transition: .8s ease;
+  color: #f00; /* Red on hover */
+}
+.overlayContent1{
+  font-family: "Monteserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+  min-height: 100vh;
+}
+
+.inputContainer{
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background:transparent;
+  border: 2px solid rgba(255,255,255, .5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.inputContainer h2{
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.input-box{
+  position: relative;
+  width: 310px;
+  margin: 30px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.input-box label {
+  position:absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+} 
+#dateLabel{
+  top: -5px;
+}
+.input-box input{
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: white;
+  padding: 0 35px 0 5px;
+
+}
+.submit{
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000;
+  font-weight: 500;
+}
+
+
+.dropbtn1 {
+  margin-left: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #5c5a55;
+  color: white;
+  padding: 13px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12%;
+  text-align: center; 
+  white-space: nowrap; 
+  width: 120px; /* fixed width of the button */
+  height: 50px; /* fixed height of the button */
+  font-family: "Anton", sans-serif;
+  letter-spacing: .5px;
+}
+
+.dropbtn1:hover {
+  opacity: 0.8;
+  transition: .5s ease;
+  color:rgb(56, 56, 195);
+  
+}
+
+.dropbtn1:hover, .dropbtn:focus {
+  background-color: #ffffff;
+  color:rgb(56, 56, 195); 
+}
+
+
+.fig1 {
+  display: flex;
+  flex-wrap: wrap; /* Make columns wrap to avoid overflow */
+  justify-content: center;
+  gap: 20px;
+}
+
+.column1 {
+  flex: 1 1 32.33%; /* Flex-grow, flex-shrink, and base width */
+  max-width: 32.33%;
+  aspect-ratio: 16 / 9;
+  padding: 5px;
+  display: flex;
+  box-sizing: border-box;
+  display: inline-block; /* Add this line to make the blocks display inline */
+  vertical-align: top;
+}
+figcaption {
+  text-transform: capitalize;
+  font-family: "Montserrat" , sans-serif;
+  font-size: large;
+  margin-top: 20px;
+  color: rgb(12, 12, 12);
+  font-weight: bold;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+    
+}
+.column1 img {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.column1 img:hover {
+
+  
+  animation-duration: 0.3s;
+  transition-duration: .3s;
+  border-left: 5px solid rgb(56, 56, 195);
+  border-bottom: 5px solid rgb(56, 56, 195);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+
+.dropdown {
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+    margin-right: 135px; /* Reduce margin to prevent extra space */
+}
+
+.filter-content {
+  border-radius: 5%;
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+  left: 0%;
+}
+
+.filter-content a {
+  font-family: "Montserrat", sans-serif ;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+.show {
+   display: block; /*USED TO HIDE DROPDOWN CONTENTS */
+}
+
+.previewImage{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  max-height: 120px;
+}
+
+@media (min-width: 1366px) and (min-height: 1024px) {
+  .textOnWorkout {
+    padding: 10px ;
+    top: 50% ; /* Adjust vertical positioning to fit */
+    transform: translate(0%, -40%) ; 
+}
+}
+
+@media (max-width: 1024px) {
+
+  .textOnWorkout1 {
+  font-size: 26px;
+}
+}
+
+@media (max-width: 1024px) {
+
+  nav ul li a {
+      font-size: 45px;
+  }
+
+  .separator {
+      font-size: 30px; 
+  }
+
+
+  .Workoutquote {
+      height: 60vh; /* Adjust height for smaller screens */
+  }
+  .quote1, .quote2, .quote3 {
+      font-size: 2rem; /* Scale down the text for tablets */
+  }
+
+  .workout1stimage .textOnWorkout h3 {
+      font-size: 80px; /* Adjust the font size to fit smaller screens */
+  }
+  .workout1stimage .textOnWorkout p {
+      font-size: 30px; /* Adjust the paragraph font size */
+      margin-left: 10%; /* Adjust the margin to better fit within the image */
+  }
+
+  .textOnWorkout {
+    padding: 10px;
+    top: 43%; /* Adjust vertical positioning to fit */
+    transform: translate(0%, -40%); /* Adjust position translation to center the text */
+  }
+
+  .workout1stimage img {
+      height: 500px; /* Reduce the image height */
+  }
+    
+    /* General button style */
+.dropbtn {
+    font-size: 24px; /* Increase the font size */
+    padding: 15px 30px; /* Increase padding to make the button larger */
+    border-radius: 8px; /* Optional: round the corners slightly */
+    width: auto; /* Adjust width if you want to make them responsive */
+}
+
+/* Specific styles for Filter and Collection buttons */
+#filterInput {
+    font-size: 20px; /* Set larger font size for Filter button */
+    padding: 20px 40px; /* Increase padding to make the button appear bigger */
+    width: 180px; /* Optional: set a fixed width */
+}
+
+#collectionInput {
+    font-size: 20px; /* Set larger font size for Collection button */
+    padding: 20px 40px; /* Increase padding to make the button appear bigger */
+    width: 180px; /* Optional: set a fixed width */
+}
+
+.figure21 {
+    flex-direction: column; /* Change the flex direction to column */
+    align-items: center; /* Center the columns vertically */
+  }
+
+  
+  .column {
+    max-width: 350px; /* Set the maximum width to 350px */
+    height: 200px;
+    width: 100%; /* Make the columns full-width */
+     /* Add a margin to the bottom of each column */
+  }
+  .column img , .column2 img{
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+  }
+  
+  .column figcaption, .column2 figcaption {
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .figure2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px; /* Reduce the gap to 10px */
+  } 
+
+
+  .profile-container {
+  display: flex;
+  flex-direction: column !important;  /* Display profiles in a row */
+  justify-content: center;
+}
+  
+
+}
+      /* DESKTOP VIEW CSS */
+
+    nav ul li a ,nav ul li {
+      text-decoration: none;    /*Removes underline */
+      font-family: "Montserrat", sans-serif ;
+      font-weight: 400;
+      color: black;
+      font-size: 16px;
+    }
+
+
+    
+    
+    body {
+      justify-content: center;
+      margin: 0px;
+      background-color: rgb(224, 224, 224);
+      display: block;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .workout1stimage{
+      font-family: "Anton", sans-serif;
+      font-size: 80px;
+      font-weight: bold;
+      font-style: italic;
+        
+    }
+
+
+    .workout1stimage img {
+      width: 100%;
+      height: auto; /* Responsive height */
+      object-fit: cover;
+      position: relative;
+      border: 2px solid black;
+      border-radius: 10px;
+      position:relative;
+        
+        
+    }
+
+    .workout1stimage .colorText{ 
+      margin-top: -80px;
+      color: rgb(56, 56, 195);
+
+    }
+    .workout1stimage .normText{
+      margin-left: 90px;
+      font-size: 40px;
+      margin-top: -80px;
+      letter-spacing: 1.5px;
+      white-space: nowrap; /* prevents text from overflowing in other viewmodels */
+      
+    }
+    
+
+
+    .textOnWorkout{
+      display: inline;
+      color: white;
+      bottom: -90px;
+      left: 20px;
+      position:absolute;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
+    figure {
+      display: flex;
+      flex-wrap: wrap; /* Make columns wrap to avoid overflow */
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .figure2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1 1 47.33%; /* Flex-grow, flex-shrink, and base width */
+      max-width: 47.33%;
+      padding: 5px;
+      box-sizing: border-box;
+      gap: 10px;
+    }
+
+    .column img , .column2 img{
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      
+    }
+
+    .column img:hover ,.column2 img:hover{
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      
+      animation-duration: 0.3s;
+      transition-duration: .3s;
+      border-left: 5px solid rgb(56, 56, 195);
+      border-bottom: 5px solid rgb(56, 56, 195);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    .column2 {
+      flex: 1 1 33.33%; /* Flex-grow, flex-shrink, and base width */
+      max-width: 33.33%;
+      padding: 5px;
+      box-sizing: border-box;
+      display: inline-block; /* Add this line to make the blocks display inline */
+      vertical-align: top;
+    }
+
+    figcaption {
+      text-transform: capitalize;
+      font-family: "Montserrat" ,sans-serif;
+      font-size: large;
+      margin-top: 20px;
+      color: rgb(10, 10, 10);
+      font-weight: bold;
+      font-style: italic;
+      padding: 2px;
+      text-align: center;
+        
+    }
+
+    .centeredContainer{
+      border-width: 1px;
+      border-radius: 5%;
+    }
+    
+    /* DROP DOWN LIST  */
+    .centeredContainer::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .centeredContainer{
+      display: flex; 
+      justify-content: space-between; /* Space between items */
+      width: 345px; /* Set a fixed width */
+      margin: 2px auto; /* Center the container horizontally and add margin at the top */
+      padding: 10px;
+      border: 1px, solid ,rgb(255, 255, 255 ,0);
+      border-radius: 5%; /* Keep the rounded corners */
+    }
+    .dropbtn {
+      margin-left: -10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      background-color: #5c5a55;
+      color: white;
+      padding: 13px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      border-radius: 12%;
+      text-align: center; 
+      white-space: nowrap; 
+      width: 120px; /* fixed width of the button */
+      height: 50px; /* fixed height of the button */
+      font-family: "Anton", sans-serif;
+      letter-spacing: .5px;
+    }
+
+    .dropbtn:hover {
+      opacity: 0.8;
+      transition: .5s ease;
+      color:rgb(56, 56, 195);
+      
+    }
+
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #ffffff;
+      color:rgb(56, 56, 195);
+      
+    }
+
+    #filterInput {
+      
+      box-sizing: border-box;
+      background-image: url('../images/loupe.png');
+      background-position: 14px 12px;
+      background-repeat: no-repeat;
+      font-size: 16px;
+      padding: 14px 20px 12px 45px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    #filterInput:focus {
+      outline: 3px solid #ddd;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        display: inline-block;
+        margin-right: 135px; /* Reduce margin to prevent extra space */
+    }
+
+    .filter-content {
+      border-radius: 5%;
+      display: none;
+      position: absolute;
+      background-color: #f6f6f6;
+      min-width: 230px;
+      overflow: auto;
+      border: 1px solid #ddd;
+      z-index: 1;
+      left: 0%;
+    }
+
+    .filter-content a {
+      font-family: "Montserrat", sans-serif ;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #ddd;
+    }
+
+    .show {
+       display: block; /*USED TO HIDE DROPDOWN CONTENTS */
+    }
+    
+    
+
+    .lowerline{
+      height: 10px;
+    }
+
+    .workoutText {
+      margin-top: 0px;
+      text-transform: uppercase;
+      letter-spacing: .1px;      
+      display: flex;
+      justify-content: center;
+      font-family: "Anton", sans-serif;
+      font-size: 25px;
+    }
+    .Workoutquote{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      min-width: 1024px;
+
+    }
+
+    .Workoutquote img{
+      border: 2px solid black;
+      border-radius: 10px;
+      height: 800px; 
+      width: 100%; 
+      height: 100%;
+      object-fit: cover; 
+    }
+    
+    .quote1  ,.quote2, .quote3{
+      font-family: "Anton", sans-serif;
+      font-size: 60px;
+      font-weight: bold;
+      font-style: italic;
+      margin-left: -4px;
+      margin-top: -4px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .quote3{
+      color:rgb(56, 56, 195);
+    }
+
+    .textOnWorkoutQuote {
+      position: absolute; /* Allows text to overlap the image */
+      top: 50%; /* Vertically centers the text */
+      left: 50%; /* Horizontally centers the text */
+      transform: translate(-50%, -50%); /* Centers the text exactly */
+      text-align: center;
+      color: white; /* White text to contrast with the image */
+      padding: 20px;
+    }
+    
+    /* OVERLAY style */
+      .overlayContent {
+      display: flex;
+      flex-direction: column; /* Stack the heading and profile row */
+      align-items: center;
+    }
+
+    .overlayContent h2 {
+      font-family: "Anton", sans-serif;
+      text-align: center;
+      font-size: 64px;
+      color: rgb(56, 56, 195);
+      margin-top: -150px;
+      text-transform: uppercase;
+    }
+
+    .profile-container {
+      display: flex;
+      flex-direction: row; /* Display profiles in a row */
+      justify-content: center;
+      margin-top: -10px;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column; /* Profile button and dropdown in column */
+      align-items: center;
+      margin: 10px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile button {
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .profile button img {
+      max-width: 310px;
+      border-radius: 50%;
+      border: 5px solid transparent;
+      filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+      cursor: pointer;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .profile button:hover {
+      transform: translateY(25px);
+    }
+
+    .profile .name {
+    position: absolute;
+    background-color: #93b0a7;
+    color: #121111;
+    font-family: "Montserrat", sans-serif ;
+    padding: 15px 30px;
+    border-radius: 100px;
+    top: -62px; left: 20%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    letter-spacing: .1px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    }
+    
+    .profile:hover .name {
+      opacity: 1;
+      transform: translateY(50%);
+      box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+    }
+    .overDrop-content{
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      border: 1px solid white;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      transform: translateY(-100%);
+      transition: opacity 0.3s, transform 0.3s, visibility 0s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+      left: 80px;
+    }
+    .overDrop-content a {
+      font-family: "Montserrat" ,sans-serif;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .overDrop-open {
+      transform: translateY(10%);
+      opacity: 1;
+      visibility: visible;
+    }
+    .profile a:hover {
+      background-color: #ddd;
+    }
+
+    #overlay{
+      margin-top: 0px; /* This is to counter the spaced margin for set for all divs */
+      transition: opacity 0.8s ease, visibility 0.8s;
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #overlay.active {
+      visibility: visible;
+      opacity: 1;
+      overflow: hidden;
+    }
+
+    #overlay .overlayContent {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    #overlay.active .overlayContent {
+      opacity: 1;
+    }
+
+    #overlay.active .delayedElement {
+      opacity: 1;
+      transition: opacity 1s ease;
+      transition-delay: 0.8s; /* Delays the fade-in after overlay animation finishes */
+    }
+    /* Close button styling */
+    .xButton {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .xButton:hover {
+      transition: .8s ease;
+      color: #f00; /* Red on hover */
+    }
+    #video-container{
+      text-align: center;
+      flex-direction: column; /* Stack video on top of the text */
+      display: flex; /* Use flexbox to center the elements horizontally */
+      justify-content: center;
+      align-items: center;
+      border: 0px solid black;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    #video-container p {
+      font-family: "Montserrat", sans-serif ;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 20px; /* Adds spacing between the video and text */
+      text-align: justify; /* Justifies the text for neat alignment */
+      width: 95%; /* Ensures the text takes full width of the container */
+    }
+    iframe {
+      border: 2px solid #ccc; /* Change the border color and width as needed */
+      border-radius: 5px; /* Add a slight rounded corner effect */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+    }
+    

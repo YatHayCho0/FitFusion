@@ -1,0 +1,26 @@
+@media (max-width: 1024px) {
+    /* Tracking Buttons */
+    .tracking-buttons {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* In general pretty much, got it from Homepage - Dylan */
+    button {
+        font-size: 16px; 
+        /* I'm not sure if this do anything because Ipad Pro is kinda big, but oh well */
+        padding: 12px 20px;
+    }
+
+    /* Tracking Display Table */
+    .tracking-display table {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .tracking-display th, 
+    .tracking-display td {
+        padding: 10px; /* Adjusted padding for better readability */
+    }
+}

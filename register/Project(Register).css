@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    color: white;
+    margin-left: 200px;
+    margin-top: 60px;
+    font-style: italic;
+}
+
+.linkcolour{
+    color: white;
+}
+
+.linkcolour:hover{
+    color: rgb(90, 132, 203);
+}
+
+.container{
+    display: flex;
+    background-image: url('../images/register.jpg');
+    background-size: cover; /* Stretches the image to cover the div */
+    background-attachment: fixed; /* Optional: keeps the image fixed while scrolling */
+    height: 662px;
+    width: 100vw;
+}
+
+.top{
+    background-image: url(../images/register.gif);
+    border-radius: 0 20% 20% 0;
+    width: 400px;
+    margin-left: -10px;
+    margin-top: -10px;
+    color: rgb(0, 0, 0);
+}
+
+.content{
+    display: list-item;
+    color: white;
+    border: 2px solid white;
+    border-radius: 15%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    margin-top: 120px;
+    margin-left: -220px;
+    height: 420px;
+    width: 550px;
+    }
+
+.h-logo {
+    position:relative;
+    margin:10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.eye{
+    padding-top: 0px;
+    margin-top: 6px;
+    margin-left: 2px;
+    border: none;
+}

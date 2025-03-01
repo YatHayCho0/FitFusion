@@ -1,0 +1,78 @@
+.tracking-input, .tracking-display, .tracking-buttons {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.button-wraper{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tracking-button {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 300ms;
+}
+
+.tracking-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+    /* https://css-irl.info/animating-underlines/ - ORIGINAL ANIMATION I LEARNT FROM */
+
+.tracking-button:hover::after,
+.tracking-button:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+form input[type="number"] {
+    padding: 15px;
+    font-size: 18px;
+    width: 250px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
